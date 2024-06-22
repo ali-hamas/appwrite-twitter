@@ -1,3 +1,70 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@layer tailwind-base, primereact, tailwind-utilities;
+
+@import "primereact/resources/themes/lara-light-blue/theme.css"
+  layer(primereact);
+
+@layer tailwind-base {
+  @tailwind base;
+}
+
+@layer tailwind-utilities {
+  @tailwind components;
+  @tailwind utilities;
+}
+
+:root {
+  --accentColor: 29 155 240;
+
+  --primaryTxt: 231 233 234;
+  --secondryTxt: 113 118 123;
+  --primaryBg: 0 0 0;
+  --secondryBg: 33 35 39;
+  --popupBg: 91 112 131;
+  --hoverBg: 23 23 23;
+  --borderColor: 47 51 54;
+}
+
+[theme-accent="green"] {
+  --accentColor: 0 186 124;
+}
+[theme-accent="pink"] {
+  --accentColor: 249 24 128;
+}
+[theme-accent="yellow"] {
+  --accentColor: 255 213 0;
+}
+[theme-accent="purple"] {
+  --accentColor: 120 87 255;
+}
+[theme-accent="orange"] {
+  --accentColor: 255 123 0;
+}
+[theme-mode="light"] {
+  --primaryTxt: 15 20 25;
+  --secondryTxt: 83 100 113;
+  --primaryBg: 254 254 254;
+  --secondryBg: 239 243 244;
+  --popupBg: 0 0 0;
+  --hoverBg: 231 231 231;
+  --borderColor: 204 204 204;
+}
+[theme-mode="dim"] {
+  --primaryTxt: 231 233 234;
+  --secondryTxt: 113 118 123;
+  --primaryBg: 21 32 43;
+  --secondryBg: 40 51 64;
+  --popupBg: 91 112 131;
+  --hoverBg: 43 53 63;
+  --borderColor: 47 51 54;
+}
+
+::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  background-size: 20px 20px;
+  margin-left: 5px;
+  cursor: pointer;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="%231D9BF0" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg>');
+}
